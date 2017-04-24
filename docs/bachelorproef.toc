@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Voorwoord}{2}
+\contentsline {section}{\numberline {2}Reden van onderzoek}{3}
+\contentsline {section}{\numberline {3}De database}{5}
+\contentsline {subsection}{\numberline {3.1}Apache Cassandra}{5}
+\contentsline {subsection}{\numberline {3.2}Een Cassandra cluster opzetten}{6}
+\contentsline {subsubsection}{\numberline {3.2.1}De machines}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}Cassandra als service}{7}

@@ -1,0 +1,58 @@
+create table category(
+	id bigint,
+	name map<text,text>,
+	active boolean,
+	
+	PRIMARY KEY (id)
+);
+create type product_size(
+	id bigint,
+	description map<text,text>
+);
+
+create type product_colour(
+	id bigint,
+	description map<text,text>,
+	sizes set<frozen<product_size>>
+);
+
+create table product (
+	id bigint,
+	active boolean
+	id_category bigint,
+	name map<text,text>,
+	description map<text,text>,
+	colours set<frozen<product_colour>>,
+	
+	PRIMARY KEY (id)
+);
+
+create type price_size(
+	id bigint,
+	standard_price decimal,
+	sell_price decimal
+);
+
+create type price_colour(
+	id bigint,
+	standard_price decimal,
+	sell_price decimal,
+	sizes set<frozen<price_size>>
+);
+
+create table price (
+	id bigint,
+	standard_price decimal,
+	sell_price decimal,
+	colours set<frozen<price_colour>>,
+	
+	PRIMARY KEY (id)
+);
+
+create table modification_log (
+	table_name text,
+	time timeuuid,
+	id bigint,
+	
+	PRIMARY KEY ((table_name),time,id)
+);

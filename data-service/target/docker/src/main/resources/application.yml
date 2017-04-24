@@ -1,0 +1,7 @@
+server:
+  port: 8001
+
+database:
+  host: 54.71.37.45,52.42.233.209,34.209.105.246
+  port: 9042
+  keyspace: aem_keyspace

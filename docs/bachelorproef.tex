@@ -1,0 +1,36 @@
+% !TeX spellcheck = nl_NL
+\documentclass{article}
+
+\usepackage{standalone}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\title{Adobe Experience Manager}
+\author{Mike Heymans}
+\date{2017}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\lstset{
+	breaklines=true,
+    backgroundcolor=\color{black},
+    basicstyle=\fontfamily{pcr}\selectfont\footnotesize\color{white},
+    numbersep=5pt,
+    language=bash
+}
+
+\begin{document}
+	\maketitle
+	\pagenumbering{gobble}	
+	\newpage
+	\pagenumbering{arabic}
+	\tableofcontents
+	\include{voorwoord}
+	\include{reden-van-onderzoek}
+	
+	\input{database}
+	\input{database-sub-cassandra}
+	\input{database-sub-opzet}
+
+\end{document}
