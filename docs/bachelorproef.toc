@@ -5,7 +5,8 @@
 \contentsline {subsection}{\numberline {3.2}Een Cassandra cluster opzetten}{6}
 \contentsline {subsubsection}{\numberline {3.2.1}De machines}{6}
 \contentsline {subsubsection}{\numberline {3.2.2}Cassandra als service}{7}
-\contentsline {section}{\numberline {4}Data-service}{10}
-\contentsline {subsection}{\numberline {4.1}De Service}{10}
-\contentsline {subsection}{\numberline {4.2}Docker}{11}
-\contentsline {subsection}{\numberline {4.3}AWS en Docker}{12}
+\contentsline {subsubsection}{\numberline {3.2.3}DevCenter}{9}
+\contentsline {section}{\numberline {4}Data-service}{11}
+\contentsline {subsection}{\numberline {4.1}De Service}{11}
+\contentsline {subsection}{\numberline {4.2}Docker}{12}
+\contentsline {subsection}{\numberline {4.3}AWS en Docker}{13}

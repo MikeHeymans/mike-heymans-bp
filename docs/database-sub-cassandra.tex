@@ -21,12 +21,12 @@
 	\par
 	Bij het aanmaken van een cluster kan men een replicatie factor meegeven. 
 	Deze geeft aan op hoeveel verschillende noden een record moet bewaard worden. 
-	Bij een factor 3 zal elk databaserij op 3 noden beschikbaar zijn. 
+	Bij een factor 3 zal elk record op 3 noden beschikbaar zijn. 
 	Des te groter de factor, des te groter de performantie en stabiliteit maar ook de duplicatie aan data vergroot mee.
 	Bij het kiezen van de replicatiefactor moet er een afweging gemaakt worden tussen niveau van beschikbaarheid en
 	het extra geheugen dat de replicatie vereist.
 	\par
-	Eén van de grootste verschillen met een standaard relationele databank is dat het linken van verscheidene tabellen niet mogelijk is.
+	Een groot verschil met een relationele databank is dat het linken van verscheidene tabellen niet mogelijk is.
 	In plaats daarvan werkt Cassandra met collecties die rechtstreeks in een kolom worden opgeslagen. 
 	Dit wordt mogelijk door het aanmaken van UDTs (User Defined Types). 
 	Wanneer een lijst van UDTs (of primitieve types) wordt opgeslagen, wordt deze omgevormd naar een json-achtige structuur. 
@@ -34,10 +34,10 @@
 	wat de performantie aanzienlijk verhoogt.
 	\par
 	Er zijn ook enkele nadelen verbonden aan het kiezen voor Cassandra als database, één van deze nadelen is dat het, out-of-the-box,
-	onmogelijk is om tabellen te querieën zoals je een SQL zou doen. 
-	Dit komt omdat Cassandra werkt met key-value paren om de data op te slagen en dus enkel aan de hand van een key 
+	onmogelijk is om tabellen te querieën zoals je met een relationele databank zou doen. 
+	Dit komt doordat Cassandra werkt met key-value paren om de data op te slagen en dus enkel aan de hand van een key 
 	(of deel van een key) naar een record gezocht kan worden. 
-	Dit heeft ook als gevolg dat aggregatie functies enkel op partitie niveau kunnen worden uitgevoerd.
+	Een bijgevolg hiervan is dat aggregatie functies enkel op partitie niveau kunnen worden uitgevoerd.
 	\par
 	Aangezien Cassandra een non-relationele databank is, is een ander nadeel de afwezigheid van transacties op databank niveau.
 	Enkel op rijniveau kan men gebruik maken van lightweight transacties door een conditie toe te voegen voor een schrijf operatie.
