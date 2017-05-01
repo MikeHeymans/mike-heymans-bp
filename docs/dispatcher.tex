@@ -1,0 +1,14 @@
+% !TeX spellcheck = nl_NL
+\documentclass{article}
+
+\begin{document}
+	\subsection{Dispatcher}
+	De dispatcher is AEM's eigen caching laag en kan tevens dienen als loadbalancer. Doordat de publieke requests via de dispatcher gaan voorziet deze een extra beveiligingslaag. Dit komt omdat we AEM kunnen afschermen voor requests van buiten ons netwerk. Om een dispatcher op te zetten installeren we de module op een web server en configureren deze. Deze configuratie bevat, onder anderen, waar onze AEM draait, welke soort bestanden er gecached moeten worden en hoe de cache van deze bestanden vervalt.
+	\par	
+	 Wanneer een dispatcher een request binnen krijgt wordt deze eerst geanalyseerd of deze in aanmerking komt voor onze cache. Buiten onze configuratie zijn er ook enkele standaard regels waarna gekeken wordt om dit te bepalen. Enkel de HTTP methode GET komt in aanmerking voor de cache, indien het request een andere methode bevat kan deze niet gecached worden. Ook wanneer er een request parameter wordt meegegeven kan de request niet gecached worden aangezien zo'n request een variabel antwoord heeft.
+	\par
+	Er zijn twee manieren waarop een cache kan vervallen, de eerste zijnde met de auto-invalidate feature. Wanneer bestanden onder deze groep vallen, zal de dispatcher telkens de versie van zijn cache vergelijken met die van AEM, indien er een mismatch is zal de dispatcher opnieuw de request naar AEM doorsturen. Dit betekent dat wijzigingen gemaakt aan onze pagina's onmiddellijk zullen doorkomen op de live site.
+	\par
+	Wanneer bovenstaande methode niet gewenst is, misschien willen we meer controle over het tijdstip dat pagina's geregenereerd worden, kunnen we de auto-invalidate functie uit laten. Als we nu onze cache willen invalideren zullen we hiervoor een call moeten doen naar de dispatcher. Wanneer deze binnenkomt vervalt de cache onmiddellijk en eerst volgend request krijgt de nieuwe content te zien.
+	\par
+\end{document}

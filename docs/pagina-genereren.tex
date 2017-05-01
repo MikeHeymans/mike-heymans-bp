@@ -1,0 +1,15 @@
+% !TeX spellcheck = nl_NL
+\documentclass{article}
+
+\begin{document}
+	\subsection{Pagina's genereren} 
+	\subsubsection{Wat is het?}
+	Als we pagina's gaan genereren, gaan we wijzigingen van het ERP doorduwen naar AEM. AEM gaat aan de hand van deze informatie noden aanmaken in onze JCR repository en per taalvariant een pagina voorzien. Eenmaal de pagina's aangemaakt zijn, kunnen ze via de corresponderende url worden opgehaald.
+	\subsubsection{Hoe werkt het?}
+	Om deze optie te voorzien moeten er enkele zaken gecodeerd worden in Java, met name de functionaliteit om via de SlingRepository de data weg te schrijven naar een node en de PageManager van AEM gebruiken om de pagina's aan te maken.
+	\par
+	Om een node aan te maken moeten we eerst een Session verkrijgen waarin we kunnen werken, dit kunnen we doen door de login methode op onze SlingRepository aan te roepen met onze credentials. JcrUtils is een voorziene klasse waarmee we noden kunnen aanmaken, het enige dat we hiervoor nodig hebben is een pad waaronder we deze willen opslaan, het type dat we aan de node willen toekennen en onze reeds verkregen sessie. Als we de node hebben aangemaakt rest ons nog enkel over mappen van de velden naar onze noden, indien ons model velden bevat die een klasse op zich zijn, moeten we met geneste noden werken. Dit nesten is heeft geen beperkingen en kan zo diep als nodig zijn. Wanneer de velden zijn overgezet mogen we niet vergeten om de save methode van onze sessie aan te roepen zodat onze data gepersisteerd wordt.
+	\par
+	De volgende stap is een pagina voor ons model, dit per taal waarin onze website beschikbaar is. Ter voorbeeld, als we een categorie toevoegen op een website
+	\subsubsection{Waarom?}
+\end{document}
