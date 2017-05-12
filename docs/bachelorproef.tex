@@ -4,6 +4,7 @@
 \usepackage{standalone}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage[dutch]{babel}
 \usepackage{listings}
 \usepackage{wrapfig}
 
@@ -30,18 +31,29 @@
 	\tableofcontents
 	\include{voorwoord}
 	\include{reden-van-onderzoek}
-	
+	%\input{samenvatting}
 	\input{database}
 	\input{database-sub-cassandra}
 	\input{database-sub-opzet}
 
 	\include{data-service}
 	
+	\input{scheduler}	
+	
 	\input{aem-architectuur}
 	\input{apache-felix}
 	\input{apache-jackrabbit}
 	\input{apache-sling}
+	% crx is deel author 
 	\input{crx}
+	% dit is de editor, deel author 
 	\input{subsec-aem}
+	\input{dispatcher}
 	\newpage
+	\input{eerste-project}
+	\newpage
+	\input{pagina-genereren}
+	\input{server-side-includes}
+	%\input{java-calls}
+	%\input{java-script}
 \end{document}

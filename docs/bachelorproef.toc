@@ -1,19 +1,39 @@
-\contentsline {section}{\numberline {1}Voorwoord}{2}
-\contentsline {section}{\numberline {2}Reden van onderzoek}{3}
-\contentsline {section}{\numberline {3}De database}{5}
-\contentsline {subsection}{\numberline {3.1}Apache Cassandra}{5}
-\contentsline {subsection}{\numberline {3.2}Een Cassandra cluster opzetten}{6}
-\contentsline {subsubsection}{\numberline {3.2.1}De machines}{6}
-\contentsline {subsubsection}{\numberline {3.2.2}Cassandra als service}{7}
-\contentsline {subsubsection}{\numberline {3.2.3}DevCenter}{9}
-\contentsline {section}{\numberline {4}Data-service}{11}
-\contentsline {subsection}{\numberline {4.1}De Service}{11}
-\contentsline {subsection}{\numberline {4.2}Docker}{12}
-\contentsline {subsection}{\numberline {4.3}AWS en Docker}{13}
-\contentsline {section}{\numberline {5}Architectuur van AEM}{16}
-\contentsline {subsection}{\numberline {5.1}OSGi}{16}
-\contentsline {subsection}{\numberline {5.2}Apache Felix}{16}
-\contentsline {subsection}{\numberline {5.3}JCR en Apache Jackrabbit}{17}
-\contentsline {subsection}{\numberline {5.4}Apache Sling}{17}
-\contentsline {subsection}{\numberline {5.5}CRX}{18}
-\contentsline {subsection}{\numberline {5.6}subsec-aem}{18}
+\select@language {dutch}
+\contentsline {section}{\numberline {1}Voorwoord}{3}
+\contentsline {section}{\numberline {2}Reden van onderzoek}{4}
+\contentsline {section}{\numberline {3}De database}{6}
+\contentsline {subsection}{\numberline {3.1}Apache Cassandra}{6}
+\contentsline {subsection}{\numberline {3.2}Een Cassandra cluster opzetten}{7}
+\contentsline {subsubsection}{\numberline {3.2.1}De machines}{7}
+\contentsline {subsubsection}{\numberline {3.2.2}Cassandra als service}{8}
+\contentsline {subsubsection}{\numberline {3.2.3}DevCenter}{10}
+\contentsline {subsubsection}{\numberline {3.2.4}Elastic IP}{11}
+\contentsline {section}{\numberline {4}Data-service}{12}
+\contentsline {subsection}{\numberline {4.1}De Service}{12}
+\contentsline {subsection}{\numberline {4.2}Docker}{13}
+\contentsline {subsection}{\numberline {4.3}AWS en Docker}{14}
+\contentsline {section}{\numberline {5}Obsidian Scheduler}{17}
+\contentsline {section}{\numberline {6}Architectuur van AEM}{18}
+\contentsline {subsection}{\numberline {6.1}OSGi}{18}
+\contentsline {subsection}{\numberline {6.2}Apache Felix}{18}
+\contentsline {subsection}{\numberline {6.3}JCR en Apache Jackrabbit}{19}
+\contentsline {subsection}{\numberline {6.4}Apache Sling}{19}
+\contentsline {subsection}{\numberline {6.5}Author}{20}
+\contentsline {subsubsection}{\numberline {6.5.1}CRX}{20}
+\contentsline {subsubsection}{\numberline {6.5.2}Editor}{20}
+\contentsline {subsubsection}{\numberline {6.5.3}DAM}{21}
+\contentsline {subsection}{\numberline {6.6}Dispatcher}{21}
+\contentsline {section}{\numberline {7}Een eerste project}{22}
+\contentsline {subsection}{\numberline {7.1}Een author lokaal draaien}{22}
+\contentsline {subsection}{\numberline {7.2}Een Maven project aanmaken}{22}
+\contentsline {subsection}{\numberline {7.3}Structuur van het Project}{23}
+\contentsline {subsection}{\numberline {7.4}Een component maken}{23}
+\contentsline {subsection}{\numberline {7.5}Pagina's genereren}{25}
+\contentsline {subsubsection}{\numberline {7.5.1}Wat is het?}{25}
+\contentsline {subsubsection}{\numberline {7.5.2}Hoe werkt het?}{25}
+\contentsline {subsubsection}{\numberline {7.5.3}De voordelen}{26}
+\contentsline {subsubsection}{\numberline {7.5.4}De nadelen}{27}
+\contentsline {subsection}{\numberline {7.6}Server Side Includes}{27}
+\contentsline {subsubsection}{\numberline {7.6.1}Wat is het?}{27}
+\contentsline {subsubsection}{\numberline {7.6.2}Waarom SSI?}{27}
+\contentsline {subsubsection}{\numberline {7.6.3}De nadelen}{28}

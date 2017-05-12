@@ -9,11 +9,10 @@
 	Voor dit project heb ik gekozen om met 3 nodes te werken, dit om toch enige performantie te hebben zonder het prijzig te maken.
 	\subsubsection{De machines}
 	Als eerste maken we de 3 machines aan waarop we Cassandra zullen draaien. 
-	Via de AWS-console navigeren we naar EC2 -> Instances waar we de ‘Launch instance’ kiezen.
+	Via de AWS-console navigeren we naar EC2, Instances waar we de ‘Launch instance’ kiezen.
 	Het eerste scherm laat ons kiezen welk besturingssysteem we willen gebruiken, hier kiezen we Amazon Linux AMI. 
 	In stap 2 bepalen we hoe krachtig onze machines zullen zijn. Het is perfect mogelijk om met de t2.micro 
-	(deze is gratis te gebruiken bij een ‘Free Tier’) maar met slecht 1 CPU en 1GB RAM heeft deze niet zo veel te bieden. 
-	Hier heb ik voor de t2.large geopteerd, deze zal beter aansluiten bij onze behoeften. 
+	(deze is, voor beperkte tijd, gratis te gebruiken met een ‘Free Tier’ account) aan de slag te gaan en voor experimentele doeleinden is dit meer dan genoeg.
 	Stap 3 hoeven we enkel het aantal instances dat we willen aanmaken wijzigen naar 3, 
 	de rest laten we ongewijzigd. Stap 4 en 5 slagen we over, deze zijn niet van toepassing. 
 	In Stap 6 maken we een nieuwe security group aan die de poorten nodig voor het gebruik van onze databank openzet. 
@@ -32,8 +31,8 @@
 	Indien deze stap afgehandeld is, krijgen we een overzicht te zien. 
 	Als alles naar wens is klikken we op ‘Launch’ waardoor er een prompt opengaat. 
 	Vanuit deze prompt kunnen we een pem-file aanmaken en downloaden, het is zeer belangrijk om 
-	deze op een veilige plaats op te slaan, deze nodig is om via ssh een connectie naar onze machines te maken. 
-	Bij het aanmaken van nieuwe machines kunnen we dezelfde pem-file hergebruiken zodat we één key hebben voor al onze instances.
+	deze op een veilige plaats op te slaan, deze is nodig om via ssh een connectie naar onze machines te maken. 
+	Bij het aanmaken van nieuwe machines kunnen we dezelfde pem-file hergebruiken zodat we \'e\'en key hebben voor al onze instances.
 	 We slagen het bestand op onder aem-ec2.pem.
 	
 	\subsubsection{Cassandra als service}
@@ -94,13 +93,6 @@
 	\begin{lstlisting}
 		$ sudo touch /etc/yum.repos.d/datastax.repo
 	\end{lstlisting}
-	
-	\par
-	Maak het bestand datastax.repo aan.
-	\begin{lstlisting}
-		$ sudo touch /etc/yum.repos.d/datastax.repo
-	\end{lstlisting}
-	
 	\par
 	Vul deze met de nodige data
 	\begin{lstlisting}
@@ -124,7 +116,7 @@
 	
 	\par
 	Als we nu Cassandra zouden opstarten op de 3 machines, hebben we 3 clusters met elks 1 node gemaakt. 
-	Vanzelfsprekend is dit niet het gezochte resultaat en willen we 1 cluster met 3 nodes, om dit mogelijk te maken moeten we de aanpassingen maken, getoond in Figuur \ref{fig:cassandra.yaml} (locatie: /etc/cassandra/conf/cassandra.yaml).
+	Vanzelfsprekend is dit niet het gezochte resultaat en willen we 1 cluster met 3 nodes, om dit te verwezenlijken moeten onze cassandra.yaml aanpassen zoals getoond in Figuur \ref{fig:cassandra.yaml} (locatie: /etc/cassandra/conf/cassandra.yaml).
 	\begin{figure}[h!]
   		\includegraphics[width=\linewidth]{images/cassandra-yaml.PNG}
   		\caption{cassandra.yaml}
@@ -137,11 +129,10 @@
 	
 	\par
 	\subsubsection{DevCenter}
-	 Nu we onze databank hebben kunnen we onze nodige modellen toevoegen, het gebruikte script kan je terugvinden in de bijlagen.
-	 Voor het uitvoeren van deze scripts kan gebruikt maken van DevCenter, een open-source tool waarmee een connectie kan gemaakt worden met een cluster. 
-	 Deze manier van werken is aangenamer dan telkens te moeten sshen naar een node om daar via het cqlsh commando onze databank te kunnen querieën. 
-	 Onze drie tabellen die we gaan gebruiken zijn Product, Category en Price. 
-	 Deze drie vertonen elk een andere graad van dynamiek, gepast voor het onderzoek dat we zullen verrichten.
-	 We voorzien telkens ook een log tabel voor deze drie zodat we aan de hand van een datum, die fungeert als ondergrends, de gewijzigde rijen kunnen opvragen.
+	 Nu we onze databank hebben kunnen we onze nodige modellen toevoegen, het gebruikte script kan je terugvinden in de bijlagen. We voorzien enkele standaard tabellen waarmee we een online catalogus kunnen vullen. Voor elke tabel voorzien we een historiek tabel waarin we de gewijzigde rijen van een bepaalde periode kunnen ophalen.
+	 Voor het uitvoeren van deze scripts kan men gebruik maken van DevCenter, een open-source tool waarmee een connectie kan gemaakt worden met een cluster. 
+	 Deze manier van werken is aangenamer dan telkens te moeten sshen naar een node om daar via het cqlsh commando onze databank te kunnen querieën.
 	 Eenmaal onze databank operationeel is kunnen we beginnen aan de service die deze zal aanspreken.
+	\subsubsection{Elastic IP}
+	Voor de lezers die van plan zijn om hun machines uit te zetten tijdens de perioden dat je een pauze neemt van deze proef, wil ik melden dat wanneer je machines uitgezet worden, ze hun IP-adres verliezen. Tijdens het rebooten zal er een nieuw adres worden toegekend waardoor deze niet meer matchen met diegene die we in de yamls hebben opgegeven. Hierdoor kunnen de noden elkaar niet meer vinden, dit is iets waar ik persoonlijk ben tegengelopen. Een oplossing is om via AWS een Elastic IP toe te kennen maar dit is niet gratis (!) en betaal je per uur dat je machine afstaat.
 \end{document}

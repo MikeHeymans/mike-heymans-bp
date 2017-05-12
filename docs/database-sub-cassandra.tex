@@ -3,7 +3,7 @@
 
 \begin{document}
 	\subsection{Apache Cassandra}
-	Apache Cassandra is een opensource, NoSql (Not only Sql) database die de dag van vandaag door vele internationale bedrijven 
+	Apache Cassandra is een open-source NoSql (Not only Sql) database die de dag van vandaag door vele internationale bedrijven 
 	in gebruik is genomen. 
 	Netflix, Instagram en het CERN hebben in Cassandra een performante, stabiele databank gevonden, 
 	die de beschikbaarheid van hun data garandeert.
@@ -17,7 +17,7 @@
 	dit maakt dat wanneer een node offline is, de andere ongehinderd blijven werken. 
 	Om het volle potentieel van Cassandra te benutten, is het aangeraden om de noden niet enkel over verschillende servers 
 	maar ook over verschillende datacenters te verspreiden. 
-	Bij deze setup mag er een datacenter offline gaan, de gebruikers zullen hier geen weet van hebben.  
+	Bij deze setup mag er een datacenter offline gaan, de gebruiker zal hier geen weet van hebben.  
 	En wanneer het datacenter terug online is, zal de data gedeeld worden met de herstelde noden.
 	Dit is ook positief voor de schaalbaarheid. 
 	Wanneer een node wordt toegevoegd, haalt deze zijn configuratie op bij een bestaande node en sluit zich naadloos aan in de cluster.
@@ -36,7 +36,7 @@
 	Doordat alle data in één rij zitten, hoeven er geen joins gedaan te worden over meerdere tabellen 
 	wat de performantie aanzienlijk verhoogt.
 	\par
-	Er zijn ook enkele nadelen verbonden aan het kiezen voor Cassandra als database, één van deze nadelen is dat het, out-of-the-box,
+	Er zijn ook enkele nadelen verbonden aan het kiezen voor Cassandra als database, \'e\'en van deze nadelen is dat het, out-of-the-box,
 	onmogelijk is om tabellen te querieën zoals je met een relationele databank zou doen. 
 	Dit komt doordat Cassandra werkt met key-value paren om de data op te slagen en dus enkel aan de hand van een key 
 	(of deel van een key) naar een record gezocht kan worden. 
@@ -44,7 +44,7 @@
 	\par
 	Aangezien Cassandra een non-relationele databank is, is een ander nadeel de afwezigheid van transacties op databank niveau.
 	Enkel op rijniveau kan men gebruik maken van lightweight transacties door een conditie toe te voegen voor een schrijf operatie.
-	Hiervoor zou men bv. een version id kunnen toevoegen aan een tabel zodat wanneer men een schrijf operatie wil doen,
-	er gekeken kan worden of de versies nog matchen. 
-	Indien dit niet het geval is wordt de operatie niet uitgevoerd en de gebruiker hiervan op de hoogte gebracht.
+	Hiervoor zou men een versie kunnen toevoegen aan een tabel zodat wanneer men een schrijf operatie wil doen,
+	er gekeken kan worden of de versie nog overeenstemt. 
+	Indien dit niet het geval is wordt de operatie niet uitgevoerd en kan het systeem op een gepaste manier reageren.
 \end{document}
