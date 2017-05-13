@@ -1,0 +1,13 @@
+% !TeX spellcheck = nl_NL
+\documentclass{article}
+
+\begin{document}
+	\section{Samenvatting}
+Adobe Experience Manager operationeel krijgen is niet vanzelfsprekend, er komen verschillende frameworks aan bod die elk een studie op zich kunnen vormen. Eenmaal opgezet blijft de vraag van hoe we met de dynamische data moeten omgaan en wat de vuistregels zijn. Omdat de Adobe documentatie beperkt geeft deze scriptie een beschrijf van de opzet en omgang van AEM.
+\par
+Om te begrijpen wat de verschillende lagen zijn van AEM en hoe deze met elkaar communiceren bouwen we een volledige stack die gebruikt kan worden om mee te experimenteren. Deze stack bestaat uit een webapplicatie opgezet met AEM, een simplistische webcatalogus waar gebruikers aan de hand van categori\"een producten kunnen opzoeken. We voorzien tevens een databank die dienst zal doen als ERP, records in de databank wijzigen en moeten op onze website doorkomen. Bij het bouwen van deze stack gaan we op zoek naar manier om dit te realiseren.
+\par
+Bij het onderzoek hebben we vier methoden onderzocht om met onze dynamische data om te gaan. De eerste zijnde pagina's laten genereren op basis van data uit de databank. Dit is een dure operatie en kan voor problemen zorgen bij onbezonnen gebruik maar is de enigste manier om editeerbare pagina's aan de hand van dynamische pagina te voorzien. De tweede manier is de data ophalen wanneer deze nodig is om vervolgens een pagina aan te maken. Deze methode is toepasbaar op een grote dataset maar ontbreekt aan de mogelijkheid om de pagina te editeren. Vervolgens hebben we Server Side Includes als optie beschouwt, hiermee kan men verschillende datatypes injecteren in een reeds bestaande html. Het voordeel hierbij is de mogelijkheid om de html apart van de data te cachen waardoor deze optie een performantie-boost ondervindt. Het nadeel van SSI is dat deze server side werkt waardoor het onmogelijk is om hiermee een interactieve pagina op te bouwen. Hiervoor hebben we onze vierde methode nodig, JavaScript. JavaScript is de enige manier om een interactieve UI te voorzien zonder pagina's opnieuw te hoeven inladen na een actie van de gebruiker.
+\par
+We kunnen besluiten dat AEM opties heeft voor dynamische data maar dat het belangrijk is om voor de ontwikkeling aanvangt een duidelijk overzicht te krijgen van de veranderlijkheid ervan en in welke situaties de gebruiker deze nodig zal hebben. Het is van het grootste belang dat een nieuwe applicatie zorgvuldig wordt gedissecteerd en de data gecatalogiseerd zodat weet welke methode waar toe te passen. Dit zorgt voor een functionele applicatie met oog op performantie alsook een kortere ontwikkelingstijd.
+\end{document}

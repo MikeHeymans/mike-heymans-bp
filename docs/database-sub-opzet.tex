@@ -43,7 +43,7 @@
 	Laten we eerst op onze machines inloggen via het commando:
 	
 	\begin{lstlisting}
-		$ ssh –i aem-ec2.pem ec2-user@1.0.0.1 
+		 $ ssh –i aem-ec2.pem ec2-user@1.0.0.1
 	\end{lstlisting}
 	
 	Nu zijn we ingelogd als ec2-user op onze machine. Om Cassandra 3.x te kunnen draaien hebben we Java 1.8 nodig, 
@@ -52,7 +52,7 @@
 	\par
 	We navigeren naar onze jvm folder
 	\begin{lstlisting}
-  		$ cd /usr/lib/jvm
+  		%*$ cd /usr/lib/jvm*
 	\end{lstlisting}
 	\par
 	Vervolgens downloaden we de java 1.8 tar file
@@ -134,5 +134,5 @@
 	 Deze manier van werken is aangenamer dan telkens te moeten sshen naar een node om daar via het cqlsh commando onze databank te kunnen querieën.
 	 Eenmaal onze databank operationeel is kunnen we beginnen aan de service die deze zal aanspreken.
 	\subsubsection{Elastic IP}
-	Voor de lezers die van plan zijn om hun machines uit te zetten tijdens de perioden dat je een pauze neemt van deze proef, wil ik melden dat wanneer je machines uitgezet worden, ze hun IP-adres verliezen. Tijdens het rebooten zal er een nieuw adres worden toegekend waardoor deze niet meer matchen met diegene die we in de yamls hebben opgegeven. Hierdoor kunnen de noden elkaar niet meer vinden, dit is iets waar ik persoonlijk ben tegengelopen. Een oplossing is om via AWS een Elastic IP toe te kennen maar dit is niet gratis (!) en betaal je per uur dat je machine afstaat.
+	Voor de lezers die van plan zijn om hun machines uit te zetten tijdens de perioden dat je een pauze neemt van deze proef, is het handig te weten dat als je machines uitgezet worden, ze hun IP-adres verliezen. Tijdens het rebooten zal er een nieuw adres worden toegekend waardoor deze niet meer matchen met diegene die we in de yamls hebben opgegeven. Hierdoor kunnen de noden elkaar niet meer vinden en is een aanpassing van de yamls nodig om dit recht te trekken. Een oplossing is om via AWS een Elastic IP toe te kennen maar dit is niet gratis (!) en wordt per uur dat de machine afstaat aangerekend.
 \end{document}

@@ -8,9 +8,6 @@
 \usepackage{listings}
 \usepackage{wrapfig}
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-
 \title{Adobe Experience Manager}
 \author{Mike Heymans}
 \date{2017}
@@ -34,7 +31,8 @@
 	\tableofcontents
 	\include{voorwoord}
 	\include{reden-van-onderzoek}
-	%\input{samenvatting}
+	\newpage
+	\input{samenvatting}
 	\input{database}
 	\input{database-sub-cassandra}
 	\input{database-sub-opzet}
@@ -51,12 +49,13 @@
 	\input{crx}
 	% dit is de editor, deel author 
 	\input{subsec-aem}
+	\input{publisher}
 	\input{dispatcher}
 	\newpage
 	\input{eerste-project}
 	\newpage
 	\input{pagina-genereren}
-	\input{server-side-includes}
 	%\input{java-calls}
+	\input{server-side-includes}
 	%\input{java-script}
 \end{document}
