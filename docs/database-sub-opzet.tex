@@ -13,11 +13,11 @@
 	Het eerste scherm laat ons kiezen welk besturingssysteem we willen gebruiken, hier kiezen we Amazon Linux AMI. 
 	In stap 2 bepalen we hoe krachtig onze machines zullen zijn. Het is perfect mogelijk om met de t2.micro 
 	(deze is, voor beperkte tijd, gratis te gebruiken met een ‘Free Tier’ account) aan de slag te gaan en voor experimentele doeleinden is dit meer dan genoeg.
-	Stap 3 hoeven we enkel het aantal instances dat we willen aanmaken wijzigen naar 3, 
+	In stap 3 hoeven we enkel het aantal instances dat we willen aanmaken te wijzigen naar 3, 
 	de rest laten we ongewijzigd. Stap 4 en 5 slagen we over, deze zijn niet van toepassing. 
-	In Stap 6 maken we een nieuwe security group aan die de poorten nodig voor het gebruik van onze databank openzet. 
+	In stap 6 maken we een nieuwe security group aan die de poorten nodig voor het gebruik van onze databank openzet. 
 	Voor onderstaande poorten maken we een ‘Custom TCP Rule’ en maken we ze compleet publiek (in productie omgevingen is 
-	dit ten strengste af te raden.) door de toegestane IP-adressen op ‘0.0.0.0/0’ te zetten. 	Figuur \ref{fig:security-settings} toont ons hoe we dit bekomen.
+	dit ten strengste af te raden) door de toegestane IP-adressen op ‘0.0.0.0/0’ te zetten. 	Figuur \ref{fig:security-settings} toont ons hoe we dit bekomen.
 	
 	
 	
@@ -36,10 +36,10 @@
 	 We slagen het bestand op onder aem-ec2.pem.
 	
 	\subsubsection{Cassandra als service}
-	Nu we onze machines hebben is het tijd om hiervan Cassandra nodes te maken. 
+	Nu we onze machines hebben, is het tijd om hiervan Cassandra nodes te maken. 
 	Via het ‘Instance’ scherm kunnen we achterhalen wat de publieke IP-adressen zijn van deze machines 
 	(laten we ervan uitgaan dat deze 1.0.0.1,1.0.0.2 en 1.0.0.3 zijn.). 
-	Volgende stap moet op elke machine identiek herhaalt worden buiten de nodige aanpassingen aan de cassandra.yaml. 
+	Volgende stap moet op elke machine identiek herhaald worden buiten de nodige aanpassingen aan de cassandra.yaml. 
 	Laten we eerst op onze machines inloggen via het commando:
 	
 	\begin{lstlisting}
@@ -73,7 +73,7 @@
 	\end{lstlisting}
 	
 	\par
-	Als we nu het volgende commando runnen zien we twee java mogelijke java engines, diegene dat al geïnstalleerd was en onze nieuwe. 
+	Als we nu het volgende commando runnen zien we twee java mogelijke java engines, diegene dat al ge\"installeerd was en onze nieuwe. 
 	Hier kiezen we om onze nieuwe als default te gebruiken.
 	\begin{lstlisting}
 		$ sudo alternatives --config java
@@ -83,11 +83,11 @@
 	\end{lstlisting}
 	
 	\par
-	Als alles correct verlopen is zien we nu 1.8 staan wanneer we opnieuw het commando ‘java -version’ uitvoeren.
+	Als alles correct verlopen is, zien we nu 1.8 staan wanneer we opnieuw het commando ‘java -version’ uitvoeren.
 	
 	\par
 	Nu volgt de installatie van Cassandra zelf, hierbij is de eerste stap het toevoegen van de datastax.repo zodat we via het yum commando Cassandra kunnen installeren.
-	 Als dit gebeurt is kunnen we via yum zowel Cassandra als Nodetool installeren.
+	 Vervolgens kunnen we via yum zowel Cassandra als Nodetool installeren.
 	\par
 	Maak het bestand datastax.repo aan.
 	\begin{lstlisting}
