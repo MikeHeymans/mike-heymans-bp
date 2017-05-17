@@ -23,8 +23,24 @@
     language=bash
 }
 
+\newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
+\hbox{ % Horizontal box
+\hspace*{0.2\textwidth} % Whitespace to the left of the title page
+\rule{1pt}{\textheight} % Vertical line
+\hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
+\parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
+
+{\noindent\Huge\bfseries Adobe \\[0.5\baselineskip] Experience \\[0.5\baselineskip] Manager}\\[2\baselineskip] % Title
+{\large \textit{Omgaan met dynamische data}}\\[8\baselineskip] % Tagline or further description
+{\Large \textsc{Mike Heymans}} % Author name
+
+\vspace{0.5\textheight} % Whitespace between the title block and the publisher
+{\noindent Hogeschool Gent}\\[\baselineskip] % Publisher and logo
+}}
+\endgroup}
+
 \begin{document}
-	\maketitle
+	\titleGM
 	\pagenumbering{gobble}	
 	\newpage
 	\pagenumbering{arabic}

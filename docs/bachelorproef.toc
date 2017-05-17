@@ -23,18 +23,19 @@
 \contentsline {subsubsection}{\numberline {7.5.1}CRX}{21}
 \contentsline {subsubsection}{\numberline {7.5.2}Editor}{21}
 \contentsline {subsubsection}{\numberline {7.5.3}DAM}{22}
-\contentsline {subsection}{\numberline {7.6}Dispatcher}{22}
-\contentsline {section}{\numberline {8}Een eerste project}{23}
-\contentsline {subsection}{\numberline {8.1}Een author lokaal draaien}{23}
-\contentsline {subsection}{\numberline {8.2}Een Maven project aanmaken}{23}
-\contentsline {subsection}{\numberline {8.3}Structuur van het Project}{24}
-\contentsline {subsection}{\numberline {8.4}Een component maken}{24}
-\contentsline {subsection}{\numberline {8.5}Pagina's genereren}{26}
-\contentsline {subsubsection}{\numberline {8.5.1}Wat is het?}{26}
-\contentsline {subsubsection}{\numberline {8.5.2}Hoe werkt het?}{26}
-\contentsline {subsubsection}{\numberline {8.5.3}De voordelen}{27}
-\contentsline {subsubsection}{\numberline {8.5.4}De nadelen}{28}
-\contentsline {subsection}{\numberline {8.6}Server Side Includes}{28}
-\contentsline {subsubsection}{\numberline {8.6.1}Wat is het?}{28}
-\contentsline {subsubsection}{\numberline {8.6.2}Waarom SSI?}{28}
-\contentsline {subsubsection}{\numberline {8.6.3}De nadelen}{29}
+\contentsline {subsection}{\numberline {7.6}Publisher}{22}
+\contentsline {subsection}{\numberline {7.7}Dispatcher}{22}
+\contentsline {section}{\numberline {8}Een eerste project}{24}
+\contentsline {subsection}{\numberline {8.1}Een author lokaal draaien}{24}
+\contentsline {subsection}{\numberline {8.2}Een Maven project aanmaken}{24}
+\contentsline {subsection}{\numberline {8.3}Structuur van het Project}{25}
+\contentsline {subsection}{\numberline {8.4}Een component maken}{25}
+\contentsline {subsection}{\numberline {8.5}Pagina's genereren}{28}
+\contentsline {subsubsection}{\numberline {8.5.1}Wat is het?}{28}
+\contentsline {subsubsection}{\numberline {8.5.2}Hoe werkt het?}{28}
+\contentsline {subsubsection}{\numberline {8.5.3}De voordelen}{29}
+\contentsline {subsubsection}{\numberline {8.5.4}De nadelen}{30}
+\contentsline {subsection}{\numberline {8.6}Server Side Includes}{30}
+\contentsline {subsubsection}{\numberline {8.6.1}Wat is het?}{30}
+\contentsline {subsubsection}{\numberline {8.6.2}Waarom SSI?}{30}
+\contentsline {subsubsection}{\numberline {8.6.3}De nadelen}{32}
