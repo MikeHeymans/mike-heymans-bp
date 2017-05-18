@@ -7,18 +7,20 @@
     Voor sommige modellen is de vorige techniek niet haalbaar omwille van het feit dat dit zou resulteren in het genereren van een te groot aantal pagina's. Voor deze modellen is er een andere techniek beschikbaar, \'e\'en pagina (per taal) voorzien die we op het laatste moment gaan parsen met de bijhorende data. Ter illustratie beschouwen we de producten, dit kunnen er tienduizenden zijn waardoor de techniek van het genereren uitgesloten wordt (wegens de vermelde nadelen). In plaats daarvan gaan we een generieke pagina voorzien die we injecteren met de productdata op het moment dat een gebruiker deze opvraagt. 
 	\subsubsection{Hoe werkt het?}
     Als eerste hebben we een SlingFilter nodig, deze bekijkt alle binnenkomende request en manipuleert deze indien nodig. Om deze filter te maken voorzien we een Java-klasse van de annotatie in Figuur \ref{fig:sling-filter} en laten deze klasse de javax.servlet.Filter interface implementeren. De meegegeven scope vertelt Sling waar deze filter op werkt, in deze situatie willen we dat elk binnenkomend request deze filter passeert. De order propertie geeft aan in welke volgorde de filters moeten uitgevoerd worden indien er meerdere zijn. Hoe lager dit getal hoe eerder de filter aan bod komt.
-	\begin{wrapfigure}{l}{0.5\textwidth}
-  		\includegraphics[width=0.4\textwidth]{images/sling-filter.PNG}
+    
+    \begin{figure}[h!]
+  		\includegraphics[width=0.8\textwidth]{images/sling-filter.PNG}
   		\label{fig:sling-filter}
-	\end{wrapfigure}
+	\end{figure}
+	
     De interface dwingt ons om drie methoden te implementeren, de init methode wordt uitgevoerd wanneer de filter in gebruik wordt genomen. De destroy methode is actief wanneer een filter wordt opgekuist, hierin kan men eventuele threads afsluiten of resources vrijgeven. Deze twee methodes laten we leeg en we focussen ons op de derde, de doFilter methode. Deze gaat elk binnenkomend request onder de loep nemen en deze (indien gewenst) manipuleren. Voor onze producten gaan we de url van een request bekijken, indien deze het patroon "/product/*" bevat, weten we dat deze naar een product pagina moet leiden. We onderscheppen deze requests en sturen deze door naar de generieke product pagina. Voor het redirecten gebeurt gaan we eerst het product ID uit de url halen. Dit ID gebruiken we om (via een REST call) het bijhorende product op te halen en toe te voegen aan het binnengekomen request.
     \par
     De volgende stap is het voorzien van de generieke pagina, dit gebeurt grotendeels conform aan wat we al hebben gezien. We voorzien een HTML met daarop enkele componenten die gebruik maakt van een controller klasse. Het verschil met het reeds geziene is de soort controller dat we gebruiken, voorheen luisterde deze naar een node maar die hebben we deze keer niet. In plaats daarvan willen we aan de request kunnen, daarop staat immers onze product informatie. Om hieraan te kunnen, voorzien we onze controller met de annotatie uit Figuur \ref{fig:request-controller}.
-    
-    \begin{wrapfigure}{r}{0.5\textwidth}
-  		\includegraphics[width=0.4\textwidth]{images/request-controller.PNG}
+
+    \begin{figure}[h!]
+  		\includegraphics[width=0.8\textwidth]{images/request-controller.PNG}
   		\label{fig:request-controller}
-	\end{wrapfigure}
+	\end{figure}
     
     Het verschil met een controller voor een node zit in de "adaptables" waarde, voorheen was dit een resource. Nu kunnen we via de "@Self" annotatie ons SlingHttpServletRequest ter beschikking stellen. Via de getAttribute methode kunnen we het product opvragen en gaan gebruiken voor bv. de getTitle methode van onze controlleren. 
 	\subsubsection{De voordelen}

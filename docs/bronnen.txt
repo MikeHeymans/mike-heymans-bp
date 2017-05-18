@@ -1,1 +1,9 @@
 www.overleaf.com
+
+How To Create a Cassandra Cluster in AWS Part 1. Geraadpleegd op 03 april 2017 via http://datascale.io/how-to-create-a-cassandra-cluster-in-aws/
+
+How To Create a Cassandra Cluster in AWS Part 2. Geraadpleegd op 03 april 2017 via http://datascale.io/how-to-create-a-cassandra-cluster-in-aws-part-2/
+
+Running Docker on AWS from te ground up. Geraadpleegd op 15 april 2017 via http://www.ybrikman.com/writing/2015/11/11/running-docker-aws-ground-up/
+
+RICHTLIJNEN VOOR BRONVERMELDING: HANDLEIDING VOOR DOCENTEN EN STUDENTEN. Geraadpleegd op 17 mei 2017 via https://cygnus.cc.kuleuven.be/bbcswebdav/orgs/e-C136003-K/BIB/openbaar/Richtlijnen_literatuurlijst.pdf

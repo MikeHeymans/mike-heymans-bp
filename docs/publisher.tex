@@ -2,8 +2,15 @@
 \documentclass{article}
 
 \begin{document}
-	\subsection{Publisher}
+	\subsection{De publisher}
+	\subsubsection{Het nut van een publisher}
 	Een publisher is niet meer dan een afgeslankte author, alle management en editor tools zijn weggenomen en enkel de repositories worden bijgehouden. Dit zorgt dat marketeers geen pagina's kunnen editeren op een publisher maar dat deze wel in staat is om pagina's te genereren. Omdat een AEM-licentie restricties legt op het aantal authors maar niet op de publishers is dit een manier om de load op de author te verminderen. Normaal zou de author voor elk request een pagina generen maar dit kan uitbesteed worden aan \'e\'en of meer publishers waardoor deze zich kan focussen om het content management gedeelte.
 	\par
 	Voor een publisher een request kan afhandelen moet deze weet hebben van de content op de website. Hiervoor heeft een publisher een kopie van alle noden in een persoonlijke JCR-repository. Elke publisher is bij de author geregistreerd als een agent, wanneer er een pagina opnieuw wordt gepersisteerd wordt deze pagina naar elke publisher verzonden zodat deze up-to-date blijven met de author. Een binnenkomend request heeft hierdoor altijd hetzelfde resultaat ongeacht de publisher die deze verzorgt.
+	\subsubsection{Een publisher opzetten}
+	Om een publisher op te zetten gaan we hetzelfde te werk als bij de author, we maken een folder "publish" met wederom onze jar en licentie in, de jar moeten we hernoemen. We vervangen "author" door "publish" en de poort passen we aan naar 4503 wat resulteert in het volgende commando.	
+	\begin{lstlisting}
+		 $ java -XX:MaxPermSize=256m -Xmx1024M -jar cq5-publish-p4503.jar
+	\end{lstlisting}
+	 Dit start een publisher op poort 4503, het verschil is dat deze geen editor ter beschikking stelt, we kunnen enkel onze website opvragen.
 \end{document}

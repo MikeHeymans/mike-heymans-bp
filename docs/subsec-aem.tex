@@ -6,4 +6,11 @@
 	Alles wat we tot hiertoe gezien hebben heeft als functie het voorzien van componenten die bepaalde functionaliteit bezitten. Eenmaal we de componenten ontwikkeld hebben en via onze bundels ge\"installeerd zijn, is het tijd voor de designers aan de slag te gaan. De belangrijkste feature van AEM is de mogelijkheid om content te voorzien, gebruik makend van onze componenten. We kunnen deze slepen op templates, configureren en voorzien van inhoud. Een designer kan zo een volledige pagina, inclusief de navigatie hiernaar toe, opbouwen zonder een enkele HTML tag of Javascript regel te schrijven. Wanneer een pagina af is, kan men deze ook publiceren via AEM zodat het resultaat door de wereld gezien kan worden.
 	\subsubsection{DAM}
 	De DAM (Digital Asset Manager) is een opslag plaats waar we onze verschillende media kwijt kunnen zoals foto's of video's. Eenmaal opgeslagen in de DAM kunnen we deze gebruiken op onze website door middel van referentie, later zien we hoe dit praktisch in zijn werk gaat.
+	\subsubsection{Een author opzetten}
+	Voor het opstarten van een author heb je twee zaken nodig: de quickstart jar en een license.properties file, beiden te verkrijgen via de Adobe website. Indien we deze ter beschikking hebben, plaatsen we deze in een folder "author" en voeren de jar uit met volgend commando (dit is voor een 64bit machine).
+	\begin{lstlisting}
+		 $ java -XX:MaxPermSize=256m -Xmx1024M -jar cq5-author-p4502.jar
+	\end{lstlisting}	
+	\par
+	Met dit commando start de author op poort 4502 van de machine, om te verifi\"eren dat het opstarten succesvol is verlopen, surfen we naar "http://ip-van-de-machine:4502/projects" in onze browser. Dit opent de UI van de author waarbij we, onder andere, kunnen bekijken welke sites er reeds zijn. Als je de jar zonder parameters hebt gestart zouden er al enkele voorbeelden gedefini\"erd moeten zijn. Met de standaard instellingen zal de author naar een publisher zoeken op poort 4503 van dezelfde machine om zijn wijzigingen naar toe te pushen.
 \end{document}

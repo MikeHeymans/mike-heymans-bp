@@ -1,41 +1,56 @@
 \select@language {dutch}
-\contentsline {section}{\numberline {1}Voorwoord}{3}
-\contentsline {section}{\numberline {2}Reden van onderzoek}{4}
-\contentsline {section}{\numberline {3}Samenvatting}{6}
-\contentsline {section}{\numberline {4}De database}{7}
-\contentsline {subsection}{\numberline {4.1}Apache Cassandra}{7}
-\contentsline {subsection}{\numberline {4.2}Een Cassandra cluster opzetten}{8}
-\contentsline {subsubsection}{\numberline {4.2.1}De machines}{8}
-\contentsline {subsubsection}{\numberline {4.2.2}Cassandra als service}{9}
-\contentsline {subsubsection}{\numberline {4.2.3}DevCenter}{11}
-\contentsline {subsubsection}{\numberline {4.2.4}Elastic IP}{12}
-\contentsline {section}{\numberline {5}Data-service}{13}
-\contentsline {subsection}{\numberline {5.1}De Service}{13}
-\contentsline {subsection}{\numberline {5.2}Docker}{14}
-\contentsline {subsection}{\numberline {5.3}AWS en Docker}{15}
-\contentsline {section}{\numberline {6}Obsidian Scheduler}{18}
-\contentsline {section}{\numberline {7}Architectuur van AEM}{19}
-\contentsline {subsection}{\numberline {7.1}OSGi}{19}
-\contentsline {subsection}{\numberline {7.2}Apache Felix}{19}
-\contentsline {subsection}{\numberline {7.3}JCR en Apache Jackrabbit}{20}
-\contentsline {subsection}{\numberline {7.4}Apache Sling}{20}
-\contentsline {subsection}{\numberline {7.5}Author}{21}
-\contentsline {subsubsection}{\numberline {7.5.1}CRX}{21}
-\contentsline {subsubsection}{\numberline {7.5.2}Editor}{21}
-\contentsline {subsubsection}{\numberline {7.5.3}DAM}{22}
-\contentsline {subsection}{\numberline {7.6}Publisher}{22}
-\contentsline {subsection}{\numberline {7.7}Dispatcher}{22}
-\contentsline {section}{\numberline {8}Een eerste project}{24}
-\contentsline {subsection}{\numberline {8.1}Een author lokaal draaien}{24}
-\contentsline {subsection}{\numberline {8.2}Een Maven project aanmaken}{24}
-\contentsline {subsection}{\numberline {8.3}Structuur van het Project}{25}
-\contentsline {subsection}{\numberline {8.4}Een component maken}{25}
-\contentsline {subsection}{\numberline {8.5}Pagina's genereren}{28}
-\contentsline {subsubsection}{\numberline {8.5.1}Wat is het?}{28}
-\contentsline {subsubsection}{\numberline {8.5.2}Hoe werkt het?}{28}
-\contentsline {subsubsection}{\numberline {8.5.3}De voordelen}{29}
-\contentsline {subsubsection}{\numberline {8.5.4}De nadelen}{30}
-\contentsline {subsection}{\numberline {8.6}Server Side Includes}{30}
-\contentsline {subsubsection}{\numberline {8.6.1}Wat is het?}{30}
-\contentsline {subsubsection}{\numberline {8.6.2}Waarom SSI?}{30}
-\contentsline {subsubsection}{\numberline {8.6.3}De nadelen}{32}
+\contentsline {section}{\numberline {1}Voorwoord}{4}
+\contentsline {section}{\numberline {2}Reden van onderzoek}{5}
+\contentsline {section}{\numberline {3}Samenvatting}{7}
+\contentsline {section}{\numberline {4}De database}{8}
+\contentsline {subsection}{\numberline {4.1}Apache Cassandra}{8}
+\contentsline {subsection}{\numberline {4.2}Een Cassandra cluster opzetten}{9}
+\contentsline {subsubsection}{\numberline {4.2.1}De machines}{9}
+\contentsline {subsubsection}{\numberline {4.2.2}Cassandra als service}{10}
+\contentsline {subsubsection}{\numberline {4.2.3}DevCenter}{12}
+\contentsline {subsubsection}{\numberline {4.2.4}Elastic IP}{13}
+\contentsline {section}{\numberline {5}Data-service}{14}
+\contentsline {subsection}{\numberline {5.1}De Service}{14}
+\contentsline {subsection}{\numberline {5.2}Docker}{15}
+\contentsline {subsection}{\numberline {5.3}AWS en Docker}{16}
+\contentsline {section}{\numberline {6}Obsidian Scheduler}{19}
+\contentsline {section}{\numberline {7}Architectuur van AEM}{20}
+\contentsline {subsection}{\numberline {7.1}OSGi}{20}
+\contentsline {subsection}{\numberline {7.2}Apache Felix}{20}
+\contentsline {subsection}{\numberline {7.3}JCR en Apache Jackrabbit}{21}
+\contentsline {subsection}{\numberline {7.4}Apache Sling}{21}
+\contentsline {subsection}{\numberline {7.5}Author}{22}
+\contentsline {subsubsection}{\numberline {7.5.1}CRX}{22}
+\contentsline {subsubsection}{\numberline {7.5.2}Editor}{22}
+\contentsline {subsubsection}{\numberline {7.5.3}DAM}{23}
+\contentsline {subsubsection}{\numberline {7.5.4}Een author opzetten}{23}
+\contentsline {subsection}{\numberline {7.6}De publisher}{23}
+\contentsline {subsubsection}{\numberline {7.6.1}Het nut van een publisher}{23}
+\contentsline {subsubsection}{\numberline {7.6.2}Een publisher opzetten}{24}
+\contentsline {subsection}{\numberline {7.7}Dispatcher}{24}
+\contentsline {subsubsection}{\numberline {7.7.1}Het nut van een dispatcher}{24}
+\contentsline {subsubsection}{\numberline {7.7.2}Een dispatcher opzetten}{25}
+\contentsline {section}{\numberline {8}Een eerste project}{27}
+\contentsline {subsection}{\numberline {8.1}Een author lokaal draaien}{27}
+\contentsline {subsection}{\numberline {8.2}Een Maven project aanmaken}{27}
+\contentsline {subsection}{\numberline {8.3}Structuur van het Project}{28}
+\contentsline {subsection}{\numberline {8.4}Een component maken}{28}
+\contentsline {subsection}{\numberline {8.5}Pagina's genereren}{30}
+\contentsline {subsubsection}{\numberline {8.5.1}Wat is het?}{30}
+\contentsline {subsubsection}{\numberline {8.5.2}Hoe werkt het?}{30}
+\contentsline {subsubsection}{\numberline {8.5.3}De voordelen}{31}
+\contentsline {subsubsection}{\numberline {8.5.4}De nadelen}{32}
+\contentsline {subsection}{\numberline {8.6}Werken met een filter}{32}
+\contentsline {subsubsection}{\numberline {8.6.1}Wat is het?}{32}
+\contentsline {subsubsection}{\numberline {8.6.2}Hoe werkt het?}{32}
+\contentsline {subsubsection}{\numberline {8.6.3}De voordelen}{34}
+\contentsline {subsubsection}{\numberline {8.6.4}De nadelen}{34}
+\contentsline {subsection}{\numberline {8.7}Server Side Includes}{34}
+\contentsline {subsubsection}{\numberline {8.7.1}Wat is het?}{34}
+\contentsline {subsubsection}{\numberline {8.7.2}Waarom SSI?}{35}
+\contentsline {subsubsection}{\numberline {8.7.3}De nadelen}{36}
+\contentsline {subsection}{\numberline {8.8}Javascript}{36}
+\contentsline {section}{\numberline {9}Conclusie}{37}
+\contentsline {subsection}{\numberline {9.1}Adobe Experience Manager}{37}
+\contentsline {subsection}{\numberline {9.2}Omgaan met dynamische data}{37}
+\contentsline {section}{\numberline {10}Bronvermelding}{39}
