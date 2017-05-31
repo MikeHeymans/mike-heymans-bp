@@ -40,7 +40,7 @@
 \contentsline {subsubsection}{\numberline {8.5.2}Hoe werkt het?}{30}
 \contentsline {subsubsection}{\numberline {8.5.3}De voordelen}{31}
 \contentsline {subsubsection}{\numberline {8.5.4}De nadelen}{32}
-\contentsline {subsection}{\numberline {8.6}Werken met een filter}{32}
+\contentsline {subsection}{\numberline {8.6}Een generieke pagina voorzien van data}{32}
 \contentsline {subsubsection}{\numberline {8.6.1}Wat is het?}{32}
 \contentsline {subsubsection}{\numberline {8.6.2}Hoe werkt het?}{32}
 \contentsline {subsubsection}{\numberline {8.6.3}De voordelen}{34}
@@ -54,3 +54,4 @@
 \contentsline {subsection}{\numberline {9.1}Adobe Experience Manager}{37}
 \contentsline {subsection}{\numberline {9.2}Omgaan met dynamische data}{37}
 \contentsline {section}{\numberline {10}Bronvermelding}{39}
+\contentsline {section}{\numberline {11}Bijlages}{39}

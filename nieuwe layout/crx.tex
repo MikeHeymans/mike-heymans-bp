@@ -1,0 +1,10 @@
+
+	\section{De machines}
+	In dit stuk overlopen we welke machines we terugvinden in een typische AEM stack. Per machine bespreken we diens taak binnenin de stack en hoe deze in verbinding staat met de andere machines. Als laatste zien we hoe we deze moeten opzetten en configureren.
+	\subsection{De Author}
+	\subsubsection{CRX}
+	Nu we de open source onderdelen van AEM hebben gezien is het tijd om de gelicentieerde delen bespreken. Het eerste dat we bespreken is Adobe CRX wat, simpelweg gezegd, Adobes implementatie is van Apache Jackrabbit en Sling. Buiten alle features die deze frameworks bieden heeft Adobe bijkomende functionaliteit toegevoegd, anders zou het maar raar zijn om hiervoor te betalen. We bekijken kort diegene die we gebruiken tijdens dit project.
+	\par
+	Zoals we reeds gezien hebben is de datastructuur van JCR een boom waarin we kunnen navigeren. Een feature die CRX voorziet is een UI waarmee we kunnen navigeren door onze nodes, de CRXDE. Met deze interface kunnen we onze nodes bekijken zoals we een filesystem zouden gebruiken. We kunnen nodes expanderen en hun kinderen bekijken om ook deze te expanderen en zo dieper in onze boom af te dalen, of we kunnen de properties van de node zelf bekijken. De kracht van deze UI is dat we een gestructureerd overzicht van de nodes zien die onze website vormgeven.
+	\par
+	De package manager is een ander belangrijk onderdeel van de CRX en geeft ons de optie onze packages te beheren. Via deze UI kunnen we packages toevoegen, verwijderen en installeren. Wanneer een package wordt geïnstalleerd, worden diens OSGi bundels opgemerkt en actief in de OSGi container. Het is belangrijk te beseffen dat eenmaal een bundel in de container leeft, de package manager hier geen invloed meer op heeft. Indien, na installatie, een package wordt verwijderd, blijft de corresponderende OSGi bundel actief. Om deze bundel te verwijderen moeten we ons wenden tot de OSGi console.

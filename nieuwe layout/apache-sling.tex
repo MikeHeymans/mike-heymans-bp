@@ -1,0 +1,7 @@
+
+	\subsection{Apache Sling}
+	Sling is een framework van Apache dat de gebruiker in staat stelt om REST calls te doen via HTTP. Het ondersteunt verscheidene bestand types waaronder JSON, XML en HTML. Sling is het framework dat AEM gebruikt om aan de hand van een URL van een request de juiste node te vinden en diens data terug te geven in de correcte vorm. Door een extensie mee te geven kunnen we aan Sling duidelijk maken hoe we onze data willen, bv. door \textquotedbl .json\textquotedbl{} achteraan een URL toe te voegen, weet Sling dat we de data als JSON terug willen.
+	\par
+	Sling is reeds ge\"integreerd met zowel Apaches Jackrabbit alsook Felix waardoor het de eigenschappen van beiden heeft. Dit wil niet zeggen dat JCR de enige manier is om met Sling data op te slaan, indien gewenst kan er ook met andere databanken zoals SQL of MongoDB gewerkt worden. 
+	\par
+	 Wanneer een Sling bundel ge\"installeerd wordt, registreert het een ResourceProviderFactory bij de service laag van onze OSGi container.  
